@@ -1,0 +1,77 @@
+body{
+    background-image: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#parameterinfo{
+    display: grid;
+    grid-template-rows: 0.1fr 0.3fr 0.4fr 0.6fr ;
+    width: 90%;
+    margin: 3% auto;
+    background-color: white;
+    height: auto;
+    align-items: center;
+    padding-bottom: 3%;
+}
+#parameterinfo h1{
+    padding: 1% 3% 0 3%;
+    text-align: center;
+    background: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#parameterinfo p{
+    padding: 0 3% 0% 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: justify;
+}
+#parameterinfo hr{
+    width: 90%;
+    height: 8%;
+    margin: auto;
+    background: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-attachment: fixed;
+    background-size: cover;
+}
+#parameterinfo h2{
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    padding: 2% 3% 3% 3%;
+}
+#parameterinfo ul,ol{
+    margin-left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#parameterinfo li{
+    margin-bottom: 1%;
+}
+#parameterinfo button{
+    background-image: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-size: cover;
+    padding: 2%;
+    width: fit-content;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 5vw;
+    font-size: large;
+    margin:  2% auto 0;
+    cursor: pointer;
+}
+#parameterinfo button a{
+    text-decoration: none;
+    color: white;
+}
+#parameterinfo button:hover{
+    box-shadow: 1vw 1vw 2vw black;
+    font-size: x-large;
+    transition: 0.5s;
+}

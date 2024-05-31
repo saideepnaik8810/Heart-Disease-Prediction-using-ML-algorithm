@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/14form.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/navbarfooter.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Prediction Form</title>
+</head>
+<body>
+    <nav>
+        <a href="./">Home</a>
+        <a href="/14form">Heart Disease</a>
+        <a href="/ArrhyPred">Arrhythmia</a>
+        <a href="/Segmentation">Segmentation</a>
+    </nav>
+    <form action="/predict_if" method="post">
+        <h1 id="form_heading">Check your status</h1>
+        <div class="form_grid">
+            <div class="attr1">
+                <input type="text" name="age" placeholder="Age"><br><br>
+                <select name="sex" id="" >
+                    <option value="" disabled selected hidden>Sex</option>
+                    <option value="0">Female(0)</option>
+                    <option value="1">Male(1)</option>
+                </select><br><br>
+                <nobr>
+                    <select name="cp" id="">
+                        <option value="" disabled selected hidden>cp</option>
+                        <option value="0" >typical angina(0)</option>
+                        <option value="1" >atypical angina(1)</option>
+                        <option value="2" >non-anginal pain(2)</option>
+                        <option value="3" >asymptomatic(3)</option>
+                    </select> 
+                </nobr> <br><br>
+                <nobr><input type="text" name="trestbps" placeholder="trestbps"> </nobr><br><br>
+                <nobr><input type="text" name="chol" placeholder="chol"> </nobr><br><br>
+                <nobr>
+                    <select name="fbs" id="">
+                        <option value="" disabled selected hidden>fbs > 120 mg/dl</option>
+                        <option value="0">False(0)</option>
+                        <option value="1">True(1)</option>
+                    </select> 
+                </nobr><br><br>
+                <nobr>
+                    <select name="restecg" id="">
+                        <option value="" disabled selected hidden>restecg</option>
+                        <option value="0">normal(0)</option>
+                        <option value="1">ST-T wave abnormality(1)</option>
+                        <option value="2">Left ventricle hypertrophy(2)</option>
+                    </select> 
+                </nobr><br><br>
+            </div>
+            <div class="attr2">
+                <nobr><input type="text" name="thalach" placeholder="thalach"></nobr><br><br>
+                <nobr>
+                    <select name="exang" id="">
+                        <option value="" disabled selected hidden>exang</option>
+                        <option value="0">no(0)</option>
+                        <option value="1">yes(1)</option>
+                    </select> 
+                </nobr><br><br>
+                <input type="text" name="oldpeak" placeholder="oldpeak"><br><br>
+                <select name="slope" id="">
+                    <option value="" disabled selected hidden>slope</option>
+                    <option value="0">upsloping(0)</option>
+                    <option value="1">flat(1)</option>
+                    <option value="2">downsloping(2)</option>
+                </select><br><br>
+                <nobr>
+                    <select name="ca" id="">
+                        <option value="" disabled selected hidden>ca</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select> 
+                </nobr><br><br>
+                <select name="thal" id="">
+                    <option value="" disabled selected hidden>thal</option>
+                    <option value="0">0</option>
+                    <option value="1">fixed defect(1)</option>
+                    <option value="2">normal(2)</option>
+                    <option value="3">reversal defect(3)</option>
+                </select><br><br>
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if output==0 %}
+    <div id="predictionbox">
+        <h1 id="Pred_results">Hurray! You are not having a heart disease!😁💪🏻</h1>
+        <button id="okay">OK</button>
+    </div>
+    {% elif output==1 %}
+    <div id="predictionbox">
+        <!-- <h1 id="Pred_results">You are having heart disease.🥲😟</h1> -->
+        <h1 id="Pred_results">You are having heart disease.💀</h1>
+        <button id="okay">OK</button>
+    </div>
+    {% endif %}
+
+    <footer>
+        <div id="rowgrid">
+            <div id="columngrid">
+                <div id="column1"> <b>Contact</b> <br><br>name@gmail.com</div>
+                <div id="column2"><b>Products</b><br><br> <a href="/14form">Heart Disease</a> <br><br><a href="/ArrhyPred">Arrhythmia</a> </div>
+                <div id="column3"> <b>Info</b> <br><br><a href="/13parainfo">13parainfo</a></div>
+            </div>
+            <hr>
+            <div class="logos">
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-reddit"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="{{url_for('static',filename='script/14form.js')}}"></script>
+</body>
+</html>

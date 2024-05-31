@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/navbarfooter.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Heart Prediction</title>
+</head>
+<body>
+    <nav>
+        <a href="./">Home</a>
+        <a href="/14form">Heart Disease</a>
+        <a href="/ArrhyPred">Arrhythmia</a>
+        <a href="/Segmentation">Segmentation</a>
+    </nav>
+    <div id="heartinfopic">
+        <div id="typeanime">
+            Predict disease related to heart.
+        </div>
+        <div id="heartphoto">
+            <img src="{{url_for('static',filename='images/heartpic.png')}}" alt="">
+        </div>
+    </div>
+    <div id="Pred14formblog">
+        <h1>Detect if having a heart disease with 13 parameters.</h1>
+        <hr>
+        <p>
+            Heart disease, also referred as cardiovascular diseases, is broad term used for diseases and conditions affecting the heart and circulatory system. It is a major cause of disability all around the world. Since heart is amongst the most vital organs of the body, its diseases affect other organs and part of the body as well
+            This prediction will be done with the help of 13 attributes related to heart condition. <span><a href="/13parainfo">Read more &#10148;</a></span>
+        </p>
+    </div>
+    <footer>
+        <div id="rowgrid">
+            <div id="columngrid">
+                <div id="column1"> <b>Contact</b> <br><br>name@gmail.com</div>
+                <div id="column2"><b>Products</b> <br><br><a href="/14form">Heart Disease</a> <br><br><a href="/ArrhyPred">Arrhythmia</a> </div>
+                <div id="column3"> <b>Info</b> <br><br><a href="/13parainfo">13parainfo</a></div>
+            </div>
+            <hr>
+            <div class="logos">
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-reddit"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

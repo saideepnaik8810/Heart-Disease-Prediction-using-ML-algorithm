@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.box{
+    display: grid;
+    padding: 2%;
+    grid-template-rows: 1fr 3fr;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    justify-items: center;
+    height: fit-content;
+    width: 70%;
+    background-color: white;
+    margin: 5% auto;
+}
+.box h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box form input[type='submit']{
+    background-image: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-size: cover;
+    padding: 5%;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 5vw;
+    font: bolder;
+    font-size: large;
+    margin: 5% 10% 5% 29%;
+    cursor: pointer;
+}
+.box form input[type='file']{
+    margin-left: 5vw;
+    margin-top: 2vw;
+}
+.box form input[type='file']::-webkit-file-upload-button{
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 2%;
+    cursor: pointer;
+}
+.box form input[type='file']{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box h2{
+    /* transition: 1s; */
+    transition-delay: 1s;
+    margin-bottom: 2vw;
+}
+.box img{
+    height: 10vw;
+}

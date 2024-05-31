@@ -1,0 +1,114 @@
+body{
+    background-image: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#form_heading{
+    font: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+}
+form{
+    display: grid;
+    background-color: white;
+    height: auto;
+    width: 50%;
+    border: none;
+    border-radius: 2%;
+    margin: 5% auto;
+    padding: 3%;
+}
+form input[type='text']{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 1.2vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 10%;
+    width: 98%;
+}
+form input[type='text']::placeholder{
+    margin: 5%;
+    color: rgb(194, 194, 194);
+}
+form input[type='submit']{
+    background-image: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-size: cover;
+    padding: 2%;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 5vw;
+    font: bolder;
+    font-size: large;
+    margin-top: 10%;
+    cursor: pointer;
+}
+.form_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 3%;
+    justify-items: center;
+    padding: 5%;
+}
+#predictionbox{
+    display: grid;
+    justify-items: center;
+    height: auto;
+    width: 60%;
+    padding: 2%;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+}
+#okay{
+    background-image: linear-gradient(to bottom left,rgb(228, 33, 218),rgb(12, 175, 255));
+    background-size: cover;
+    padding: 1%;
+    border: none;
+    border-radius: 0.5vw;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: bold;
+}
+form select{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 10%;
+    color: rgb(194, 194, 194);
+}
+form img{
+    height: 3%;
+    cursor: help;
+}
+.ter{
+    /* position: absolute; */
+    height: 20vw;
+    background-color: red;
+    top: 20%;
+    left: 20%;
+    /* z-index: 5; */
+    /* display: none; */
+    visibility: hidden;
+}
+.hov:hover + .ter{
+    visibility: visible;
+    background-color: red;
+}
+select{
+    /* appearance: none; */
+    /* border: none; */
+}
+select option{
+    appearance: none;
+    border: none;
+    background-color: black;
+}
+.attr1 select option:hover{
+    background-color: black;
+    color: white;
+}

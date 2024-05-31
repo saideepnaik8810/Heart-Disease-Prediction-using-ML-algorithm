@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/navbarfooter.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/ArrPred.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Arrhythmia Detection</title>
+</head>
+<body>
+    <nav>
+        <a href="./">Home</a>
+        <a href="/14form">Heart Disease</a>
+        <a href="/ArrhyPred">Arrhythmia</a>
+    </nav>
+    <div class="box">
+        <h1>Detect If You Are Suffering From Arrhythmia</h1>
+        <form action="/DetectArr" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="Image" ><br><br>
+            <input type="submit" value="Submit" >
+        </form>
+        {% if img_base64 %}
+        <img src="data:image/png;base64,{{ img_base64 }}" alt="">
+        {% endif %}
+
+        {% if output==0 %}
+        <h2>Supraventricular premature beat</h2>
+        {% elif output==1 %}
+        <h2>Myocardinal Infaction</h2>
+        {% elif output==2 %}
+        <h2>Unclassified beat</h2>
+        {% elif output==3 %}
+        <h2>Normal beat</h2>
+        {% elif output==4 %}
+        <h2>Fusion of ventricular and normal beat</h2>
+        {% elif output==5 %}
+        <h2>Ventricular premature beat</h2>
+        {% endif %}
+
+    </div>
+    <footer>
+        <div id="rowgrid">
+            <div id="columngrid">
+                <div id="column1"> <b>Contact</b> <br><br>name@gmail.com</div>
+                <div id="column2"><b>Products</b> <br><br><a href="/14form">Heart Disease</a> <br><br><a href="/ArrhyPred">Arrhythmia</a> </div>
+                <div id="column3"> <b>Info</b> <br><br><a href="/13parainfo">13parainfo</a></div>
+            </div>
+            <hr>
+            <div class="logos">
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-reddit"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="{{url_for('static',filename='script/ArrhyPred.js')}}"></script>
+</body>
+</html>
